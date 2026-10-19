@@ -1,0 +1,51 @@
+-- Bài thực hành: Tạo CSDL QuanLySinhVien
+-- Chạy trên MySQL Workbench, MySQL 8.0.16+ hỗ trợ CHECK
+
+CREATE DATABASE IF NOT EXISTS QuanLySinhVien
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE QuanLySinhVien;
+
+CREATE TABLE IF NOT EXISTS Class (
+    ClassID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ClassName VARCHAR(60) NOT NULL,
+    StartDate DATETIME NOT NULL,
+    Status BIT
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS Student (
+    StudentID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    StudentName VARCHAR(30) NOT NULL,
+    Address VARCHAR(50),
+    Phone VARCHAR(20),
+    Status BIT,
+    ClassID INT NOT NULL,
+    CONSTRAINT FK_Student_Class
+        FOREIGN KEY (ClassID) REFERENCES Class(ClassID)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS Subject (
+    SubID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    SubName VARCHAR(30) NOT NULL,
+    Credit TINYINT NOT NULL DEFAULT 1,
+    Status BIT DEFAULT b'1',
+    CONSTRAINT CK_Subject_Credit CHECK (Credit >= 1)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS Mark (
+    MarkID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    SubID INT NOT NULL,
+    StudentID INT NOT NULL,
+    Mark FLOAT DEFAULT 0,
+    ExamTimes TINYINT DEFAULT 1,
+    CONSTRAINT UQ_Mark_Sub_Student UNIQUE (SubID, StudentID),
+    CONSTRAINT CK_Mark_Range CHECK (Mark BETWEEN 0 AND 100),
+    CONSTRAINT FK_Mark_Subject FOREIGN KEY (SubID) REFERENCES Subject(SubID),
+    CONSTRAINT FK_Mark_Student FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
+) ENGINE=InnoDB;
+
+-- Kiểm tra cấu trúc các bảng và khóa/ràng buộc
+SHOW TABLES;
+SHOW CREATE TABLE Class;
+SHOW CREATE TABLE Student;
+SHOW CREATE TABLE Subject;
+SHOW CREATE TABLE Mark;
