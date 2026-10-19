@@ -1,0 +1,52 @@
+/* Element selector: định dạng trang và văn bản */
+body {
+    margin: 0;
+    background-color: #edf4fc;
+    color: #29384c;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* Class selector: khối nội dung */
+.container {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 32px;
+    background-color: white;
+    border: 1px solid #d6e4f4;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(26, 67, 114, 0.10);
+}
+/* ID selector: tiêu đề */
+#page-title {
+    text-align: center;
+    color: #1762a2;
+}
+/* Grouping selector: dùng chung cho nhiều phần tử */
+h1, h2, p {
+    margin-top: 0;
+}
+h2 { color: #245e95; }
+.introduction { font-size: 17px; }
+.hobbies ul { padding-left: 28px; }
+.hobbies li { margin-bottom: 9px; font-weight: 600; }
+/* Class selectors: mỗi sở thích một màu */
+.hobby-reading { color: #a04caa; }
+.hobby-coding { color: #147d65; }
+.hobby-travel { color: #d27622; }
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1762a2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .2s, transform .2s;
+}
+/* Pseudo-classes: hover và focus */
+button:hover { background-color: #0e4575; transform: translateY(-2px); }
+button:focus-visible { outline: 3px solid #f2ae49; outline-offset: 3px; }
+#message { margin-top: 14px; color: #176d4c; }
+@media (max-width: 700px) {
+    .container { margin: 20px 12px; padding: 22px; }
+}
