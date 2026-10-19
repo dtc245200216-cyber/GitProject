@@ -1,0 +1,80 @@
+/* Thiết lập cơ bản */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+    margin: 0;
+    padding-top: 70px; /* Tránh nội dung bị header fixed che */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 1500px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header cố định khi cuộn */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.main-header h1 { margin: 0; font-size: 24px; }
+.main-header nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.main-header nav ul li { margin-left: 20px; }
+.main-header nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+.main-header nav ul li a:hover { color: #8fd0ff; }
+
+/* Bố cục ba cột bằng Flexbox */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+.sidebar {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.left-sidebar, .right-sidebar { width: 200px; }
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    min-width: 0;
+}
+.sidebar h3 { margin-top: 0; color: #333; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li { margin-bottom: 10px; color: #555; }
+.main-content h2 { margin-top: 0; color: #1d5d94; }
+.main-content section { margin-top: 32px; }
+
+/* Bố cục phù hợp với màn hình nhỏ */
+@media (max-width: 850px) {
+    .page-container { flex-wrap: wrap; }
+    .main-content { order: 0; width: 100%; flex-basis: 100%; }
+    .left-sidebar, .right-sidebar { width: calc(50% - 10px); }
+}
+@media (max-width: 600px) {
+    body { padding-top: 120px; }
+    .main-header { min-height: 120px; flex-direction: column; justify-content: center; gap: 10px; }
+    .main-header h1 { font-size: 20px; }
+    .main-header nav ul li { margin: 0 7px; }
+    .main-header nav ul li a { font-size: 13px; }
+    .page-container { margin: 12px; gap: 12px; }
+    .left-sidebar, .right-sidebar { width: 100%; }
+}
