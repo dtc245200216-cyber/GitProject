@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f3f7fc; color: #23344a; line-height: 1.65; }
+main { max-width: 920px; margin: 30px auto; padding: 12px 20px 32px; }
+h1 { color: #185a9d; text-align: center; margin-bottom: 28px; }
+h2 { font-size: 20px; color: #235d92; margin: 0 0 12px; }
+h3 { font-size: 15px; margin: 2px 0 8px; }
+section { background: white; border-radius: 12px; padding: 22px 27px; margin-bottom: 18px; box-shadow: 0 3px 16px #20487616; }
+li { margin-bottom: 7px; }
+.square-list { list-style-type: square; }
+.roman-list { list-style-type: upper-roman; }
+.image-list { list-style-image: url("marker.svg"); padding-left: 28px; }
+.two-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 25px; }
+.two-columns > div { background: #eef5fc; border: 1px solid #c9ddf2; padding: 14px 25px; border-radius: 9px; }
+.outside-list { list-style-type: square; list-style-position: outside; }
+.inside-list { list-style-type: square; list-style-position: inside; padding-left: 0; }
+.shorthand-list { list-style: square inside url("marker.svg"); }
+.colorful-list { background-color: #eaf7ef; color: #17633c; padding: 18px 20px 18px 44px; border-radius: 9px; }
+.colorful-list li { margin: 10px 0; padding: 4px 6px; }
+.roadmap-list { list-style: upper-roman inside; background: #e8f1ff; color: #184f95; padding: 18px 25px; border-radius: 9px; }
+.roadmap-list li { margin: 10px 0; padding: 5px; font-weight: bold; }
+@media(max-width:600px) { main { padding: 12px; } section { padding: 18px; } .two-columns { grid-template-columns: 1fr; } }
