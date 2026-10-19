@@ -1,0 +1,47 @@
+/* Thiết lập chung */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f7fb;
+    color: #25344a;
+}
+header { display: block; padding: 26px 12px; background: #dceefa; }
+h1 { margin: 0; }
+nav {
+    display: block;
+    background-color: #ffffff;
+    padding: 16px 10px;
+    border-bottom: 1px solid #cbd8e6;
+}
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 9px 12px;
+}
+nav a:hover { color: #1765a1; background: #e8f2ff; border-radius: 5px; }
+main { max-width: 1100px; margin: 0 auto; }
+section.columns { display: block; margin-top: 20px; font-size: 0; }
+.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-height: 200px;
+    padding: 20px;
+    background-color: lightblue;
+    margin: 10px 1%;
+    border: 1px solid #90c1da;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.box h2 { margin-top: 0; }
+footer { display: block; margin-top: 30px; padding: 18px; background: #284761; color: white; }
+footer p { margin: 0; }
+@media (max-width: 700px) {
+    .box { width: 94%; margin: 10px 3%; }
+    nav a { margin: 4px; }
+}
