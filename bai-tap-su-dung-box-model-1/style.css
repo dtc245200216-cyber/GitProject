@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #222;
+}
+h1 { margin: 24px 20px; }
+.cards { display: flow-root; }
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
+    border-radius: 4px;
+}
+.card h2 { font-size: 17px; margin: 0 0 10px; }
+.card p { font-size: 13px; line-height: 1.4; margin: 0; }
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
+}
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+}
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
+}
