@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng bộ chọn CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 id="page-title">Trang web của tôi</h1>
+        <p class="introduction">Xin chào! Tôi là một sinh viên yêu thích công nghệ, luôn muốn học hỏi và phát triển kỹ năng lập trình web.</p>
+        <section class="hobbies">
+            <h2>Sở thích của tôi</h2>
+            <ul>
+                <li class="hobby-reading">Đọc sách</li>
+                <li class="hobby-coding">Lập trình</li>
+                <li class="hobby-travel">Du lịch</li>
+            </ul>
+        </section>
+        <button id="greet-button" type="button">Nhấn vào đây</button>
+        <p id="message" aria-live="polite"></p>
+    </main>
+    <script>
+        document.getElementById('greet-button').addEventListener('click', function () {
+            document.getElementById('message').textContent = 'Cảm ơn bạn đã ghé thăm trang web!';
+        });
+    </script>
+</body>
+</html>
