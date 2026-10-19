@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký người dùng</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#eef4fa;font-family:Arial,Tahoma,sans-serif;color:#263648}
+    .box{width:min(480px,94%);margin:48px auto;background:white;border-radius:12px;box-shadow:0 8px 28px #173f6a20;overflow:hidden}
+    h1{font-size:23px;text-align:center;color:white;background:#1769aa;margin:0;padding:22px}
+    form{padding:26px}label.field{display:block;font-weight:600;margin:16px 0 7px}
+    input[type=text],input[type=email],input[type=tel]{width:100%;padding:12px;border:1px solid #bfcddd;border-radius:6px;font:inherit}
+    fieldset{border:0;padding:12px 0;margin:10px 0}legend{font-weight:600;margin-bottom:6px}
+    .choices{display:flex;gap:20px;flex-wrap:wrap}.choices label{cursor:pointer}
+    button{background:#1769aa;color:white;border:0;border-radius:6px;padding:12px 22px;cursor:pointer;font-size:15px}
+    button[type=reset]{background:#e6ebf0;color:#263648}.actions{display:flex;gap:10px;margin-top:14px}
+    p.note{font-size:12px;color:#667485;line-height:1.5}
+  </style>
+</head>
+<body>
+  <main class="box">
+    <h1>ĐĂNG KÝ NGƯỜI DÙNG</h1>
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+      <label class="field" for="name">Họ và tên</label>
+      <input id="name" type="text" name="name" placeholder="Nhập họ và tên" required>
+
+      <label class="field" for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Nhập địa chỉ email" required>
+
+      <label class="field" for="phone">Số điện thoại</label>
+      <input id="phone" type="tel" name="phone" placeholder="Nhập số điện thoại" required>
+
+      <fieldset>
+        <legend>Giới tính</legend>
+        <div class="choices">
+          <label><input type="radio" name="gender" value="male" required> Nam</label>
+          <label><input type="radio" name="gender" value="female"> Nữ</label>
+          <label><input type="radio" name="gender" value="other"> Khác</label>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+      </div>
+      <p class="note">Biểu mẫu thực hành gửi bằng POST đến server mẫu của CodeGym. Server có thể không còn hoạt động.</p>
+    </form>
+  </main>
+</body>
+</html>
