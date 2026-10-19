@@ -1,0 +1,44 @@
+/* Định dạng chung */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 65px; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
+/* Thanh điều hướng dính ở đầu trang khi cuộn */
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+.sticky-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sticky-menu ul li { margin: 0 15px; }
+.sticky-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+.sticky-menu ul li a:hover,
+.sticky-menu ul li a:focus-visible {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Các phần nội dung đủ dài để cuộn trang */
+section { padding: 100px 20px; min-height: 100vh; }
+#home { background-color: #f4f4f4; }
+#about { background-color: #ddd; }
+#services { background-color: #bbb; }
+#contact { background-color: #999; }
