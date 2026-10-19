@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Research Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="survey">
+  <header><h1>Market Research Survey</h1><p>Please take a few moments to complete this satisfaction survey.</p></header>
+  <form id="surveyForm">
+    <section class="question"><label class="heading" for="age">What is your age range? <span>*</span></label><select id="age" name="age" required><option value="">Choose one</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-54</option><option>55 or older</option></select></section>
+    <section class="question"><label class="heading" for="income">What is your yearly income range? <span>*</span></label><select id="income" name="income" required><option value="">Choose one</option><option>$0 - $25,000</option><option>$25,001 - $50,000</option><option>$50,001 - $100,000</option><option>$100,001 - $150,000</option><option>$150,000+</option></select></section>
+    <fieldset class="question"><legend class="heading">Gender <span>*</span></legend><label><input type="radio" name="gender" value="male" required> Male</label><label><input type="radio" name="gender" value="female"> Female</label><label><input type="radio" name="gender" value="other"> Other</label></fieldset>
+    <fieldset class="question"><legend class="heading">Which of the following products have you purchased in the last 2 months?</legend><p class="help">Please check all that apply.</p><label><input type="checkbox" name="product" value="Product 1"> Product 1</label><label><input type="checkbox" name="product" value="Product 2"> Product 2</label><label><input type="checkbox" name="product" value="Product 3"> Product 3</label></fieldset>
+    <fieldset class="question"><legend class="heading">How often would you use our new product?</legend><label><input type="radio" name="frequency" value="daily"> Daily</label><label><input type="radio" name="frequency" value="weekly"> Weekly</label><label><input type="radio" name="frequency" value="monthly"> Monthly</label></fieldset>
+    <section class="question"><label class="heading" for="price">What would you pay for the new product?</label><div class="currency"><span>$</span><input type="number" id="price" name="price" min="0" step="0.01" placeholder="0.00"></div></section>
+    <section class="question"><label class="heading" for="features">What features would you like to see in the new product?</label><textarea id="features" name="features" rows="4" placeholder="Your comments..."></textarea></section>
+    <fieldset class="question"><legend class="heading">Please rate your level of agreement with the following statements.</legend><div class="table-wrap"><table><thead><tr><th>Statement</th><th>Strongly disagree</th><th>Disagree</th><th>Neutral</th><th>Agree</th><th>Strongly agree</th></tr></thead><tbody>
+    <tr><th>Our products are priced fairly.</th><td><input type="radio" name="price_rating" value="1" aria-label="Strongly disagree"></td><td><input type="radio" name="price_rating" value="2" aria-label="Disagree"></td><td><input type="radio" name="price_rating" value="3" aria-label="Neutral"></td><td><input type="radio" name="price_rating" value="4" aria-label="Agree"></td><td><input type="radio" name="price_rating" value="5" aria-label="Strongly agree"></td></tr>
+    <tr><th>Our products are high quality.</th><td><input type="radio" name="quality_rating" value="1" aria-label="Strongly disagree"></td><td><input type="radio" name="quality_rating" value="2" aria-label="Disagree"></td><td><input type="radio" name="quality_rating" value="3" aria-label="Neutral"></td><td><input type="radio" name="quality_rating" value="4" aria-label="Agree"></td><td><input type="radio" name="quality_rating" value="5" aria-label="Strongly agree"></td></tr>
+    <tr><th>Our company provides good customer service.</th><td><input type="radio" name="service_rating" value="1" aria-label="Strongly disagree"></td><td><input type="radio" name="service_rating" value="2" aria-label="Disagree"></td><td><input type="radio" name="service_rating" value="3" aria-label="Neutral"></td><td><input type="radio" name="service_rating" value="4" aria-label="Agree"></td><td><input type="radio" name="service_rating" value="5" aria-label="Strongly agree"></td></tr></tbody></table></div></fieldset>
+    <div class="actions"><button type="submit">Submit</button><button type="reset" class="secondary">Reset</button></div>
+    <p id="successMessage" class="success" role="status" hidden>Thank you! Your survey has been completed (demo only).</p>
+  </form>
+</main>
+<script src="script.js"></script>
+</body></html>
