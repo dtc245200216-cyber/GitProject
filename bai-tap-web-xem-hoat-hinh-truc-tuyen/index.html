@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hoạt Hình Vui - Xem phim và học điều hay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="header-inner">
+  <a class="logo" href="#trang-chu" aria-label="Hoạt Hình Vui"><span class="logo-mark">▶</span><span>Hoạt Hình <b>Vui</b></span></a>
+  <label class="search-box"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Tìm phim hoạt hình..." aria-label="Tìm phim theo tên"></label>
+  <span class="tag">Bài tập HTML • CSS • JS</span>
+</div></header>
+<nav class="head-links" aria-label="Menu điều hướng"><a href="#trang-chu">Trang chủ</a><a href="#danh-sach">Phim hoạt hình</a><a href="#video-player">Đang xem</a><a href="#gioi-thieu">Giới thiệu</a></nav>
+<div class="page-wrap" id="trang-chu">
+  <div class="intro"><div><h1>Thế giới hoạt hình dành cho bạn ✨</h1><p>Khám phá các video minh họa được tuyển chọn cho bài tập thiết kế giao diện.</p></div><span class="intro-icon">🎬</span></div>
+  <div class="layout">
+    <aside class="left-content" id="danh-sach">
+      <div class="panel-title"><div><h2>Danh sách video</h2><p id="result-count">3 nội dung</p></div></div>
+      <label class="sort-label" for="sort">Sắp xếp</label>
+      <select id="sort"><option value="newest">Mới cập nhật</option><option value="popular">Lượt xem (dữ liệu demo)</option><option value="az">Tên A–Z</option></select>
+      <div class="video-list" id="video-list"></div>
+      <div class="empty" id="empty" hidden>Không tìm thấy phim phù hợp.</div>
+    </aside>
+    <main class="right-content" id="video-player">
+      <div class="player-head"><span class="status-dot"></span><span>TRÌNH PHÁT VIDEO</span></div>
+      <div class="player-frame" id="player-container"></div>
+      <div class="player-details">
+        <div class="badge-line"><span class="badge">Giáo dục &amp; giải trí</span><span class="badge badge-soft">Nguồn công khai</span></div>
+        <h2 id="current-title">Đang tải nội dung...</h2>
+        <p id="current-description"></p>
+        <p class="source-note" id="source-note"></p>
+      </div>
+      <div class="notice"><strong>Lưu ý về video nhúng:</strong> Website không tự chèn quảng cáo, nhưng không thể kiểm soát quảng cáo, độ phân giải, quyền nhúng và ngôn ngữ của video YouTube. Chất lượng 720p/1080p phụ thuộc vào nguồn và kết nối.</div>
+    </main>
+  </div>
+  <section id="gioi-thieu" class="about"><h2>Về website</h2><p>Đây là dự án thực hành xây dựng layout bằng div, CSS, video HTML5 và iframe YouTube. Tính năng tìm kiếm, chọn phim và sắp xếp hoạt động ngay trên trình duyệt, không cần backend.</p></section>
+</div>
+<footer class="footer">© 2026 Hoạt Hình Vui · Website học tập, không sở hữu nội dung video của bên thứ ba.</footer>
+<script src="script.js"></script>
+</body>
+</html>
