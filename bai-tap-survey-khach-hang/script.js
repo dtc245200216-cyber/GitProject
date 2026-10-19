@@ -1,0 +1,1 @@
+document.querySelector('#surveyForm').addEventListener('submit',function(event){event.preventDefault();document.querySelector('#successMessage').hidden=false;});document.querySelector('#surveyForm').addEventListener('reset',function(){document.querySelector('#successMessage').hidden=true;});
