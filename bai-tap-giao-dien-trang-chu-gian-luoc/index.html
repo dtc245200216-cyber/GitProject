@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Giản Lược</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Tiêu đề Trang Web</h1>
+        <nav aria-label="Điều hướng chính">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-container" id="home">
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Nội dung chính của trang</h2>
+            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
+            <section id="about">
+                <h3>Giới thiệu</h3>
+                <p>Chào mừng bạn đến với trang web mẫu. Bố cục này sử dụng Flexbox để sắp xếp sidebar trái, nội dung chính và sidebar phải trên cùng một hàng.</p>
+            </section>
+            <section id="services">
+                <h3>Dịch vụ</h3>
+                <p>Chúng tôi cung cấp các nội dung học tập và ví dụ thực hành HTML, CSS và thiết kế giao diện web.</p>
+            </section>
+            <section>
+                <h3>Nội dung bài viết</h3>
+                <p>Thuộc tính position: fixed giúp thanh tiêu đề luôn hiển thị ở đầu trang kể cả khi cuộn xuống. z-index: 1000 bảo đảm header nằm trên các nội dung khác.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed commodo ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Praesent quis metus volutpat, tristique velit sit amet, volutpat massa. Aliquam erat volutpat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum egestas risus, vitae posuere neque commodo sed. Cras id eros dictum, molestie dui sed, commodo sapien.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget tortor varius, luctus felis at, consectetur eros. Aenean rutrum finibus dui vitae placerat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et lectus at justo sollicitudin molestie. Donec feugiat urna ac ligula accumsan, nec ullamcorper nisi consequat.</p>
+            </section>
+            <section id="contact">
+                <h3>Liên hệ</h3>
+                <p>Đây là phần thông tin liên hệ mẫu của trang web.</p>
+            </section>
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
+        </aside>
+    </div>
+</body>
+</html>
